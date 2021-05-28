@@ -11,8 +11,8 @@ export const GlobalStyle = createGlobalStyle`
     --white: #ffffff;
     --black: #000000;
     --blue: #3f81f2;
-    --paleblue: #a8cae3;
-    --nav: #1b5075;
+    --paleblue: #c5dced;
+    --nav: #042136;
     --steel: #c2c8cc;
 
 
@@ -68,10 +68,6 @@ button{
 
 }
 
-img,svg{
-    width: 100%;
-    height: auto;
-}
 
 img{
     width: 100%;

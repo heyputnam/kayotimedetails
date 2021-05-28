@@ -8,12 +8,11 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 1rem 1rem;
-background: var(--steel);
+background: var(--nav);
 color: var(--white);
 position: relative;
 z-index: 500;
-border-radius: 10px;
-margin: 0.5rem;
+
 
 
 
@@ -36,7 +35,6 @@ p{
 
 
 `
-
 const Nav = styled.nav`
 width: 25rem;
 max-width: 40rem;
@@ -76,9 +74,7 @@ justify-content: space-between;
     
  
 
-`;
-
-
+`
 const Button = styled.button`
 background-color: var(--blue);
 padding: 0.5rem 1rem;
@@ -98,7 +94,6 @@ cursor: pointer;
 
 
 `
-
 const HamburgerBtn = styled.button`
 position: relative;
 background: transparent;
@@ -139,8 +134,6 @@ display: none;
     }
 
 `
-
-
 const MobileMenu = styled.div`
 display: flex;
 flex-direction: column;
