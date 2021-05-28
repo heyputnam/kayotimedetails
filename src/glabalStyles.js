@@ -4,19 +4,18 @@
 const { createGlobalStyle } = require("styled-components");
 
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
 
-${''/* variables */ }
 
 :root{
-    --white: #ffffff
-    --black: #000000
-    --blue: #3f81f2
-    --paleblue: #a8cae3
-    --nav: #1b5075
-    --steel: #c2c8cc
+    --white: #ffffff;
+    --black: #000000;
+    --blue: #3f81f2;
+    --paleblue: #a8cae3;
+    --nav: #1b5075;
+    --steel: #c2c8cc;
 
-    
+
 }
 
 *,*::before,*::after{
@@ -74,6 +73,10 @@ img,svg{
     height: auto;
 }
 
+img{
+    width: 100%;
+    height: auto; 
+}
 
 
 
@@ -81,4 +84,3 @@ img,svg{
 
 `
 
-export default GlobalStyle;
