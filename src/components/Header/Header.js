@@ -110,7 +110,7 @@ display: none;
 
     &::before,&::after{
         content: '';
-        background: var(--white);
+        background: var(--black);
         width: 2rem;
         height: 2px;
         display: inline-block;
@@ -151,7 +151,7 @@ opacity: ${props => (
 visibility: ${props => (
     props.clicked ? 'visable' : 0
 )};
-background: rgba(53, 53,63, 0.85);
+background: rgba(0, 0,0, 0.87);
 /* makes rounded and look like floating  */
 border-radius: 20px;
 margin: 0.5rem;
