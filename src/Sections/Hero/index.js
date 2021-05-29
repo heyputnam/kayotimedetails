@@ -1,4 +1,4 @@
-import styled  from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import Blue from '../../assets/bmwblueblob.png'
 import Red from '../../assets/bmwredblob.png'
 import Light from '../../assets/bmwlightblob.png'
@@ -6,18 +6,29 @@ import BoxingLogo from '../../assets/whitearrow.png'
 import bmwAnimCar from '../../assets/bmw2.png'
 import heart from '../../assets/heartlogo.png'
 
+
+
+
 const HeroSection = styled.div`
 width: 100vw;
 height: 45vw;
-background-color: rgba(0, 0, 0, 0.85);
+background-color: black;
 color: white;
-
-
 display: flex;
 justify-content: center;
 position: relative;
 
+@media only Screen and (max-width: 48em){
+    height: 70vw;
+    display: block;
+    
+}
 
+
+@media only Screen and (max-width: 420px){
+    height: auto;
+    padding-bottom: 2rem;
+}
 
 `
 
@@ -64,6 +75,16 @@ const MainContent = styled.div`
   justify-content: center;
   align-items: center;
   width: 70vw;
+
+  @media only Screen and (max-width: 48em){
+      flex-direction: column;
+      width: 100vw;
+      justify-content: center;
+      align-items: center;
+  
+
+
+  }
   
 `
 const LeftBlock = styled.div`
@@ -72,6 +93,17 @@ flex-direction: column;
 align-items: flex-start;
 width: 50%;
 line-height: 1.5;
+
+@media only Screen and (max-width: 48em){
+    width: 80%;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    /* be careful with decimal points it can throw everything off */
+    margin-top: calc(2.5rem + 2.5vw);
+    filter: drop-shadow(2px 4px 6px var(--black));
+
+}
 
 
 
@@ -89,6 +121,8 @@ font-size: calc(0.3rem + 0.3vw);
 padding: 0.5rem 1rem;
 border-radius: 20px;
 width: calc(4rem + 4vw);
+
+
 
 `
 
@@ -147,6 +181,30 @@ max-width: 100%;
 width: calc(30% + 30vw);
 z-index: 7;
 height: auto;
+/* makes the image move up and down and look like its floating */
+/* couldnt figure out how to make it a variable outside of the styled component */
+
+animation: move 2.5s ease infinite;
+@keyframes move {
+    0% { transform: translateY(-5px)  }
+    50% { transform: translateY(10px) }
+    100% { transform: translateY(-5px) }
+}
+/* tablet view dimmed out  */
+
+@media only Screen and (max-width: 48em){
+align-items: flex-start;
+position: absolute;
+bottom: 0;
+opacity: 0.35;
+width: calc(30% + 20vw);
+}
+/* makes disapear compleatly on a phone screen  */
+
+@media only Screen and (max-width: 40em){
+    display: none;
+}
+
 
 
 
@@ -187,7 +245,9 @@ const Hero = () => {
             <img src={BoxingLogo} alt="cta" width="400" height="400" />
                  </CTA>
             </LeftBlock>
+           
           <CarImage src={bmwAnimCar} alt="car" height="400" width="400"/>
+        
             </MainContent>
         </HeroSection>
     )
