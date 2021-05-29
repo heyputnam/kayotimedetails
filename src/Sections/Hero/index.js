@@ -148,6 +148,9 @@ padding: 0.5rem 0;
 `
 
 const SubText = styled.h5`
+
+font-size: calc(0.5rem + 0.5vw);
+  color: var(--bmwblue);
 `
 const CTA = styled.div`
 
