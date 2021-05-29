@@ -16,7 +16,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-background: var(--white);
+background: #EA3E48;
 `
 const Waves = styled.img`
 width: 100%;
@@ -28,7 +28,7 @@ top: -1rem;
 
 const CgLogo = styled.img`
 position: absolute;
-bottom: -15rem;
+bottom: -12rem;
 right: 8rem;
 height: calc(10rem + 10w);
 width: calc(10rem + 10vw);
@@ -40,7 +40,7 @@ position: absolute;
 right: 30rem;
 height:calc(8rem + 8vw);
 width:calc(8rem + 8vw);
-bottom: -13rem;
+bottom: -10rem;
 
 
 `
@@ -134,8 +134,15 @@ padding-bottom: 5rem;
 
 const AboutText = styled.div`
 position: relative;
+padding: 10px;
+margin-left: 10px;
 width: 50%;
 right: 2rem;
+border-radius: 25px;
+background: #EA3E48;
+box-shadow: inset 29px 29px 41px #a62c33,
+            inset -29px -29px 41px #ff505d;
+
 `
 
 
@@ -143,10 +150,8 @@ const Text = styled.p`
 font-size: calc(0.5rem + 1vw);
 line-height: 1.5;
 color: var(--black);
-border-radius: 30px;
-background: linear-gradient(145deg, #e6e6e6, #ffffff);
-box-shadow:  26px 26px 70px #d4d4d4,
-             -26px -26px 70px #ffffff;
+padding: 10px;
+
 
 `
 const Circle = styled.div`
@@ -155,8 +160,9 @@ width: 1rem;
 height: 1rem;
 border-radius: 50%;
 background: var(--black);
-margin-right: 0.5rem;
 margin-top: 1rem;
+margin-right: 0.8rem;
+box-shadow: 3px 3px 3px black;
 
 
 
@@ -165,7 +171,7 @@ margin-top: 1rem;
 const WavesB = styled.img`
 width: 100%;
 position: absolute;
-bottom: -25rem;
+bottom: -22.7rem;
 float: bottom;
 
 
@@ -179,6 +185,7 @@ const About = () => {
        <BrandLogo>
         <CgLogo src={cglogo} height="200" width="200" />
         <MLogo src={mlogo} height="200" width="200" />
+       
         </BrandLogo>
         <Main>
             <div>
@@ -199,7 +206,7 @@ const About = () => {
                <AboutText>
                 <SideCar src={kayologo} height="400" width="400"/>
                 <Text>Here at Kayo Time Details we're committed to protecting and mantaining your vehicals, proudly detailing vehicals of Annapolis and the surrounding areas. We offer a full service indoor detailing, either drop your car off or let us pick it up for you(limited to agreement). Sceduale an appoitment today and let us remind you what you car looks like new.</Text>
-                <div>
+                <div style={{marginLeft: "0.5rem"}}>
                     <Circle style={{ backgroundColor: "var(--bmwblue)"}}/>
                     <Circle style={{ backgroundColor: "var(--bmwred)"}}/>
                     <Circle style={{ backgroundColor: "var(--bmwlightblue)"}}/>
