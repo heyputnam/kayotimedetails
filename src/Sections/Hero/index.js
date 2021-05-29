@@ -151,6 +151,16 @@ const SubText = styled.h5`
 
 font-size: calc(0.5rem + 0.5vw);
   color: var(--bmwblue);
+  @media only Screen and (max-width: 48em){
+      color: var(--white);
+      background: var(--black);
+      box-shadow: 2px 0.3px 20px 0.3px var(--white);
+      border-radius: 10px;
+
+
+  }
+
+
 `
 const CTA = styled.div`
 
