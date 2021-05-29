@@ -1,4 +1,4 @@
-import logo from '../../assets/boxing.png'
+import logo from '../../assets/caricon.png'
 import styled from 'styled-components'
 import { useState, setState } from 'react'
 
@@ -8,8 +8,8 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 1rem 1rem;
-background: var(--nav);
-color: var(--white);
+background: var(--white);
+color: var(--black);
 position: relative;
 z-index: 500;
 
@@ -53,7 +53,7 @@ justify-content: space-between;
 
     a{
     font-weight: 600;
-    color: var(--white);
+    color: var(--black);
     line-height: 1.5;
 
         &::after{
@@ -82,14 +82,14 @@ border-radius: 25px;
 color: var(--white);
 font-weight:  600;
 cursor: pointer;
-
+/* box-shadow:  0px 3px 16px -3px white; */
      &:hover{
          transform: scale(1.1);
-
+         box-shadow:  0px 3px 16px -3px #E7222E;
      }
      &:focus{
          transform: scale(0.9);
-
+         box-shadow:  0px 4px 16px -3px #5e87ff;
     }
 
 

@@ -14,6 +14,11 @@ export const GlobalStyle = createGlobalStyle`
     --paleblue: #c5dced;
     --nav: #042136;
     --steel: #c2c8cc;
+    --bmwred: #E7222E;
+    --bmwblue: #16588E;
+    --bmwlightblue: #81C4FF;
+    --tranblack: rgba(0, 0, 0, 0.9) ;
+ 
 
 
 }
