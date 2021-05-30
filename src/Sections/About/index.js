@@ -16,7 +16,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-background: #EA3E48;
+background: var(--white);
 `
 const Waves = styled.img`
 width: 100%;
@@ -45,6 +45,8 @@ bottom: -10rem;
 
 `
 
+
+
 const Main = styled.div`
 margin-top: 15rem;
 margin-left: 2rem;
@@ -55,15 +57,15 @@ flex-direction: column;
 
 const Title = styled.h1`
 display: inline-block;
-font-size: 2.7rem;
+font-size: 4rem;
 margin-top: 5rem;
-margin-left: 5rem;
+margin-left: 10rem;
 
 `
 
 const CurvedLine = styled.div`
-margin-left: 5rem;
-width: 7rem;
+margin-left: 9rem;
+width: 12rem;
 height: 2rem;
 border: 5px solid var(--bmwred);
 border-color: var(--bmwred) transparent transparent ;
@@ -97,27 +99,34 @@ height: 2rem;
 const SideCar = styled.img`
 width: calc(25rem + 20vw);
 position: absolute;
-right: 15rem;
-bottom: 30%;
+left: calc(-4rem + 2vw);
+bottom: 6rem;
+/* box-shadow: 4px 40px 40px white; */
+filter: drop-shadow(0.3rem 0.7rem 0.4rem rgba(0, 0, 0, 0.7));
 
 
 `
 
 const Logo = styled.img`
+
 height: calc(10rem + 10vw);
 width: calc(15rem + 15vw);
 display: flex;
 justify-content: center;
 align-items: center;
 margin-bottom: -2rem; 
-margin-right: 3rem;
 
+z-index: 2;
 `
 const Blob = styled.img`
-margin-right: -33.5rem;
+position: relative;
+left: calc(-20rem - 10vw);
+top: 2px;
 grid-row: 1;
 height: calc(20rem + 240px);
 width: calc(18rem + 240px);
+z-index: 1;
+
 `
 const Stack = styled.div`
 position: relative;
@@ -128,20 +137,22 @@ flex-direction: grid;
 justify-content: center;
 align-items: center;
 padding-bottom: 5rem;
-
+left: 2rem;
+top: 2px;
 
 `
 
 const AboutText = styled.div`
 position: relative;
-padding: 10px;
-margin-left: 10px;
+/* padding: 10px; */
+
 width: 50%;
-right: 2rem;
-border-radius: 25px;
-background: #EA3E48;
-box-shadow: inset 29px 29px 41px #a62c33,
-            inset -29px -29px 41px #ff505d;
+top: 2px;
+left: calc(-8rem - 9vw);
+border-radius: 30px;
+background: #f0efef;
+box-shadow:  25px 25px 49px #929292,
+             -25px -25px 49px #ffffff;
 
 `
 
@@ -150,7 +161,11 @@ const Text = styled.p`
 font-size: calc(0.5rem + 1vw);
 line-height: 1.5;
 color: var(--black);
-padding: 10px;
+padding: 2px;
+/* left: -20rem;
+top: 2px; */
+margin-left: 2px;
+
 
 
 `
@@ -177,12 +192,24 @@ float: bottom;
 
 `
 
+const Phrase = styled.h1`
+margin-bottom: -35px;
+font-weight: 800;
+font-size: 2.3rem;
+color: var(--bmwred);
+z-index: 1;
+margin-left: calc(-14rem - 11vw);
+padding-right: 15rem;
+font-family: 'PT Sans Caption', sans-serif;
+`
+
 const About = () => {
     return(
         <AboutSection>
            
        <Waves  src={logo} height="400" width="400"/>
        <BrandLogo>
+       
         <CgLogo src={cglogo} height="200" width="200" />
         <MLogo src={mlogo} height="200" width="200" />
        
@@ -197,15 +224,16 @@ const About = () => {
           
            
         <Stack> 
-            <Blob src={blob} height="400" width="400"></Blob>
+            {/* <Blob src={blob} height="400" width="400"></Blob> */}
             <Logo src={bmwside} height="400" width="400"></Logo>
+            <Blob src={blob} height="400" width="400"></Blob>
         
 
 
         </Stack>
                <AboutText>
                 <SideCar src={kayologo} height="400" width="400"/>
-                <Text>Here at Kayo Time Details we're committed to protecting and mantaining your vehicals, proudly detailing vehicals of Annapolis and the surrounding areas. We offer a full service indoor detailing, either drop your car off or let us pick it up for you(limited to agreement). Sceduale an appoitment today and let us remind you what you car looks like new.</Text>
+                <Text >Here at Kayo Time Details we're committed to protecting and mantaining your vehicals, proudly detailing vehicals of Annapolis and the surrounding areas. We offer a full service indoor detailing, either drop your car off or let us pick it up for you(limited to agreement). Sceduale an appoitment today and let us remind you what you car looks like new.</Text>
                 <div style={{marginLeft: "0.5rem"}}>
                     <Circle style={{ backgroundColor: "var(--bmwblue)"}}/>
                     <Circle style={{ backgroundColor: "var(--bmwred)"}}/>
@@ -214,8 +242,11 @@ const About = () => {
                </AboutText>
             </Content>
         </Main>
+        <Phrase>
+           Never using anything other then the best.
+       </Phrase>
         <WavesB src={logo2}/>
-        
+      
         </AboutSection>
 
 

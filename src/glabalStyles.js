@@ -18,6 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     --bmwblue: #16588E;
     --bmwlightblue: #81C4FF;
     --tranblack: rgba(0, 0, 0, 0.9) ;
+    --shadred: #EA3E48;
  
 
 
