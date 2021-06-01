@@ -227,7 +227,7 @@ width: calc(30% + 20vw);
 
 const Hero = () => {
     return(
-        <HeroSection>
+        <HeroSection id="home">
             <Blobs>
 
                 <BlueBlob>
