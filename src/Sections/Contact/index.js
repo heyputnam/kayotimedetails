@@ -30,6 +30,7 @@ color: white;
     bottom: 0;
     border-bottom: 2px solid var(--bmwblue);
     transform: translate(-50%);
+    
 }
 
 
@@ -40,6 +41,7 @@ color: white;
 const Icons = styled.div`
    display: flex;
   margin-bottom: 3rem;
+  margin-top: 1rem;
   a {
     &:hover {
       img {
@@ -161,7 +163,7 @@ const Contact = () => {
             </Row>
             <textarea name="message" id="" cols="30" rows="2" placeholder="your message"></textarea>
             
-            <div>
+            <div style={{margin: "0 auto"}}>
                 <button>
                     Submit
                 </button>
