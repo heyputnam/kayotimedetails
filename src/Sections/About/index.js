@@ -4,9 +4,8 @@ import cglogo from '../../assets/chemicalguyslogo.png'
 import mlogo from '../../assets/meguiarslogo.png'
 import logo from '../../assets/wave.png'
 import logo2 from '../../assets/wave2.png'
-import bmwside from '../../assets/bmwside.png'
 import kayologo from '../../assets/kayo-logo.png'
-import blob from '../../assets/aboutblob.png'
+
 
 
 const AboutSection = styled.div`
@@ -16,16 +15,88 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-background: var(--white);
+
 `
 const Waves = styled.img`
 width: 100%;
 position: absolute;
 top: -1rem;
+height: auto;
+
 
 
 `
 
+
+const Main = styled.div`
+margin: 0 15rem;
+margin-top: 15rem;
+display: flex;
+justify-content: center;
+flex-direction: column;
+
+
+
+@media only Screen and (max-width: 64em){
+  margin: 3rem calc(5rem + 5vw);
+  margin-top: 10rem;
+
+}
+
+@media only Screen and (max-width: 40em){
+  align-items: center;
+  margin: 3rem calc(3rem + 3vw);
+
+}
+
+`
+
+const Title = styled.h1`
+display: inline-block;
+font-size: 3rem;
+font-family: 'BioRhyme', serif;
+margin-top: 1em;
+
+@media only Screen and (max-width: 40em){
+  font-size: 1rem;
+
+}
+
+
+`
+
+const CurvedLine = styled.div`
+width: 8rem;
+height: 2rem;
+border: 5px solid var(--bmwred);
+border-color: var(--bmwred) transparent transparent ;
+border-radius: 150%/60px 70px 0 0;
+
+@media only Screen and (max-width: 40em){
+ width: 7rem;
+}
+
+
+
+
+
+
+`
+
+const Content = styled.div`
+display: flex;
+justify-content: space-around;
+align-items: center;
+
+@media only Screen and (max-width: 40em){
+ flex-direction: column;
+
+}
+
+
+
+
+`
 const CgLogo = styled.img`
 position: absolute;
 bottom: -12rem;
@@ -33,6 +104,7 @@ right: 8rem;
 height: calc(10rem + 10w);
 width: calc(10rem + 10vw);
 padding: 4rem;
+
 
 `
 const MLogo = styled.img`
@@ -44,45 +116,6 @@ bottom: -10rem;
 
 
 `
-
-
-
-const Main = styled.div`
-margin-top: 15rem;
-margin-left: 2rem;
-display: flex;
-justify-content: center;
-flex-direction: column;
-`
-
-const Title = styled.h1`
-display: inline-block;
-font-size: 4rem;
-margin-top: 5rem;
-margin-left: 10rem;
-
-`
-
-const CurvedLine = styled.div`
-margin-left: 9rem;
-width: 12rem;
-height: 2rem;
-border: 5px solid var(--bmwred);
-border-color: var(--bmwred) transparent transparent ;
-border-radius: 150%/60px 70px 0 0;
-
-
-`
-
-const Content = styled.div`
-display: flex;
-justify-content: space-around;
-align-items: center;
-
-
-`
-
-
 const BrandLogo = styled.div`
 display: flex;
 justify-content: space-around;
@@ -92,67 +125,58 @@ width: 2rem;
 height: 2rem;
 
 
+@media only Screen and (max-width: 40em){
+display: none ;
+
+}
+
 
 `
 
 
-const SideCar = styled.img`
-width: calc(25rem + 20vw);
-position: absolute;
-left: calc(-4rem + 2vw);
-bottom: 6rem;
+const KayoLogo = styled.img`
+display: flex;
+justify-content: center;
+align-content: center;
+width: 40%;
+bottom: 5rem;
 /* box-shadow: 4px 40px 40px white; */
 filter: drop-shadow(0.3rem 0.7rem 0.4rem rgba(0, 0, 0, 0.7));
 
+animation: move 2.5s ease infinite;
+@keyframes move {
+    0% { transform: translateY(-5px)  }
+    50% { transform: translateY(10px) }
+    100% { transform: translateY(-5px) }
+}
+@media only Screen and (max-width: 40em){
+width: 50vw;
+padding-bottom: 0;
+
+}
 
 `
 
-const Logo = styled.img`
 
-height: calc(10rem + 10vw);
-width: calc(15rem + 15vw);
-display: flex;
-justify-content: center;
-align-items: center;
-margin-bottom: -2rem; 
 
-z-index: 2;
-`
-const Blob = styled.img`
-position: relative;
-left: calc(-20rem - 10vw);
-top: 2px;
-grid-row: 1;
-height: calc(20rem + 240px);
-width: calc(18rem + 240px);
-z-index: 1;
 
-`
-const Stack = styled.div`
-position: relative;
-/* height: calc(10rem + 10vw);
-width: calc(10rem + 10vw); */
-display: flex;
-flex-direction: grid;
-justify-content: center;
-align-items: center;
-padding-bottom: 5rem;
-left: 2rem;
-top: 2px;
 
-`
+
+
 
 const AboutText = styled.div`
 position: relative;
 /* padding: 10px; */
 
 width: 50%;
-top: 2px;
-left: calc(-8rem - 9vw);
-border-radius: 30px;
-background: #f0efef;
-box-shadow:  25px 25px 49px #929292,
-             -25px -25px 49px #ffffff;
+position: relative;
+
+
+
+@media only Screen and (max-width: 40em){
+ width: 100%;
+}
+
 
 `
 
@@ -160,12 +184,9 @@ box-shadow:  25px 25px 49px #929292,
 const Text = styled.p`
 font-size: calc(0.5rem + 1vw);
 line-height: 1.5;
+margin-left: 1rem;
 color: var(--black);
-padding: 2px;
-/* left: -20rem;
-top: 2px; */
-margin-left: 2px;
-
+font-family: 'Poppins', sans-serif;
 
 
 `
@@ -175,8 +196,7 @@ width: 1rem;
 height: 1rem;
 border-radius: 50%;
 background: var(--black);
-margin-top: 1rem;
-margin-right: 0.8rem;
+margin: 0.5rem;
 box-shadow: 3px 3px 3px black;
 
 
@@ -188,32 +208,34 @@ width: 100%;
 position: absolute;
 bottom: -22.7rem;
 float: bottom;
+display: none;
+
+@media only Screen and (max-width: 48em){
+   display: none;
+}
+
+
+
+
+
 
 
 `
 
-const Phrase = styled.h1`
-margin-bottom: -35px;
-font-weight: 800;
-font-size: 2.3rem;
-color: var(--bmwred);
-z-index: 1;
-margin-left: calc(-14rem - 11vw);
-padding-right: 15rem;
-font-family: 'PT Sans Caption', sans-serif;
-`
+
+
 
 const About = () => {
     return(
         <AboutSection>
            
        <Waves  src={logo} height="400" width="400"/>
-       <BrandLogo>
+       {/* <BrandLogo>
        
         <CgLogo src={cglogo} height="200" width="200" />
         <MLogo src={mlogo} height="200" width="200" />
        
-        </BrandLogo>
+        </BrandLogo> */}
         <Main>
             <div>
                 <Title>About Us</Title>
@@ -223,16 +245,10 @@ const About = () => {
  
           
            
-        <Stack> 
-            {/* <Blob src={blob} height="400" width="400"></Blob> */}
-            <Logo src={bmwside} height="400" width="400"></Logo>
-            <Blob src={blob} height="400" width="400"></Blob>
-        
-
-
-        </Stack>
+       
+        <KayoLogo src={kayologo} height="400" width="400"/>
                <AboutText>
-                <SideCar src={kayologo} height="400" width="400"/>
+        
                 <Text >Here at Kayo Time Details we're committed to protecting and mantaining your vehicals, proudly detailing vehicals of Annapolis and the surrounding areas. We offer a full service indoor detailing, either drop your car off or let us pick it up for you(limited to agreement). Sceduale an appoitment today and let us remind you what you car looks like new.</Text>
                 <div style={{marginLeft: "0.5rem"}}>
                     <Circle style={{ backgroundColor: "var(--bmwblue)"}}/>
@@ -242,9 +258,6 @@ const About = () => {
                </AboutText>
             </Content>
         </Main>
-        <Phrase>
-           Never using anything other then the best.
-       </Phrase>
         <WavesB src={logo2}/>
       
         </AboutSection>
