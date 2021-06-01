@@ -1,10 +1,26 @@
 
+import styled from 'styled-components'
 
-const PhotoBlock = () => {
+
+const RightBlock = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+width: 40%;
+position: relative;
+
+@media only Screen and (max-width: 48rem){
+    display: none;
+}
+
+`
+
+const PhotoBlock = ({picture}) => {
+    const pic = require(`../../assets/${picture}`).default;
     return(
-        <section>
-            photoblock component
-        </section>
+        <RightBlock>
+           <img src={pic} alt="picture"/>
+        </RightBlock>
     )
 }
 
