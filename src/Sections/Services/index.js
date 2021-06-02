@@ -31,7 +31,7 @@ top: 0;
 left: 0;
 bottom: 0;
 width: 100vw;
-height: 85vw;
+height: 93vh;
 background: var(--black);
 background-size: auto 100vh;
 z-index: -1;
@@ -92,6 +92,14 @@ position: relative;
 
 @media only Screen and (max-width: 48rem){
     display: block;
+    &:last-child{
+        margin-bottom: 2rem;
+    }
+}
+
+
+@media only Screen and (max-width: 40em){
+    margin: 10rem calc(2rem + 3vw);
     &:last-child{
         margin-bottom: 2rem;
     }
@@ -170,10 +178,10 @@ const Services = () => {
                     t1.from(
                         el.childNodes[0],
                         {
-                            x: 300,
+                            x: -300,
                             opacity: 0,
-                            duration: 4,
-                            ease: "power2.inOut",
+                            duration: 3,
+                            ease: "power2",
 
                             scrollTrigger:{
                                 trigger: el,
@@ -182,15 +190,14 @@ const Services = () => {
                                 end: "bottom bottom-=200",
                                 scrub: true,
                                 snap: true,
-                                markers: true,
+                                // markers: true,
                             }
                         }
                     ).to(
                         el.childNodes[1],
                         {
                             transform: "scale(0)",
-                            duration: 4,
-                            ease: "power2",
+                            ease: "power2.inOut",
 
                             scrollTrigger:{
                                 trigger: el.childNodes[1],
@@ -199,39 +206,37 @@ const Services = () => {
                                 end: "bottom center",
                                 scrub: true,
                                 snap: true,
-                                markers: true,
+                                // markers: true,
                             }
                         }
                     ).from(
                         el.childNodes[2],
                         {
-                            opacity: 0,
-                            ease: "power2",
+                            y: 400,
 
-                            scrollTrigger:{
-                                trigger: el,
-                                id: `section-${index + 1}`,
-                                start: "top center+=100",
-                                end: "bottom bottom-=200",
-                                scrub: true,
-                                snap: true,
-                                markers: true,
+                            duration: 8,
+              
+                            ease: "power2",
+                            scrollTrigger: {
+                              id: `section-${index + 1}`,
+                              trigger: el,
+                              start: "top center+=100",
+                              end: "bottom bottom-=200",
+                              scrub: true,
+                              snap: true,
                             }
                         }
                     ).to(
                         el, {
-                            y: 400,
-                            duration: 4,
-                            ease: "power2",
+                            opacity: 0,
 
-                            scrollTrigger:{
-                                trigger: el,
-                                id: `section-${index + 1}`,
-                                start: "top center+=200",
-                                end: "center top+=300",
-                                scrub: true,
-                                snap: true,
-                                markers: true,
+                            ease: "power2",
+                            scrollTrigger: {
+                              id: `section-${index + 1}`,
+                              trigger: el,
+                              start: "top top+=300",
+                              end: "center top+=300",
+                              scrub: true,
                             }
                         }
                 
@@ -302,14 +307,14 @@ const Services = () => {
                     <li>Interior leather/plastic/vinyl UV Protection Treatment </li>
                     <li>Interior Stain Extraction</li>
                     <li>Iron and Brake Dust Removal for Rims</li>
-                    <li>Rust Removal On Rims</li>
+                    {/* <li>Rust Removal On Rims</li>
                     <li>Engine Bay Deep Clean</li>
                     <li>Trunk Deep Clean</li>
                     <li>Exterior Trim restoration and UV Protection</li>
                     <li>Max Pro Tire Gel</li>
                     <li>RainX window Treatment</li>
                     <li>Exterior Full Polish</li>
-                    <li>Ceramic Wax</li>
+                    <li>Ceramic Wax</li> */}
                 </ul>}
                
                />
@@ -319,12 +324,7 @@ const Services = () => {
                <PhotoBlock picture="diamondwheel.png"/>
            </Content>
            <Content ref={addToRefs}>
-               <TextBlock 
-                topic=""
-                title=""
-                subText=""
-               
-               />
+              <TextBlock></TextBlock>
                <OBJ>
                 
                 </OBJ>

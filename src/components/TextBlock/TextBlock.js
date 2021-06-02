@@ -49,6 +49,11 @@ padding: 0.5rem 1rem;
 border-radius: 20px;
 width: calc(4rem + 4vw);
 
+@media only Screen and (max-width: 48em){
+font-size: calc(0.4rem + 0.8vw);
+}
+
+
 
 
 `
@@ -70,6 +75,11 @@ line-height: 1.2;
 padding: 0.5rem 0;
 
 
+@media only Screen and (max-width: 48em){
+    font-size: calc(1rem + 1.5vw)
+}
+
+
 
 
 `
@@ -78,6 +88,11 @@ const SubText = styled.h5`
 
 font-size: calc(0.5rem + 0.5vw);
  color: var(--bmwblue);
+
+ @media only Screen and (max-width: 48em){
+    font-size: calc(0.5rem + 1vw)
+}
+
 
 
 
