@@ -66,7 +66,7 @@ left: 0;
 
 const Reviews = () => {
     return(
-        <ReviewsSection>
+        <ReviewsSection id="reviews">
           <Background>
                <Title>What Others are Saying</Title>
                

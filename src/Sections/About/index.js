@@ -227,7 +227,7 @@ display: none;
 
 const About = () => {
     return(
-        <AboutSection>
+        <AboutSection id="about">
            
        <Waves  src={logo} height="400" width="400"/>
        {/* <BrandLogo>
