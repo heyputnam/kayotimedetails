@@ -1,6 +1,8 @@
 import logo from '../../assets/caricon.png'
 import styled from 'styled-components'
-import { useState, setState } from 'react'
+import { gsap } from 'gsap'
+import { useState, setState, useRef, useEffect } from 'react'
+import {ScrollTrigger} from 'gsap/ScrollTrigger'
 
 
 const Headers = styled.header`
@@ -170,24 +172,50 @@ overflow: hidden;
 
 `
 const Header = () => {
+    
+    const [click, setClick] = useState(false);
+    const handleClick = () => setClick(!click);
 
 
-    // setting up state for button click of hamburger button 
+    const headerRef = useRef(null);
+    gsap.registerPlugin(ScrollTrigger);
 
-    const[click, setClick] = useState(false)
-    const handleClick = () => setClick(!click)
+    useEffect(()=>{
+        let element = headerRef.current;
+        gsap.to(element,{
+            position: "fixed",
+            top: "1rem",
+            left: "3rem",
+            right: "3rem",
+            padding: "1.5rem 2rem",
+    
+            borderRadius: "50px",
+    
+            border: "3px solid var(--white)",
+    
+            duration: 1,
+            ease: "power1.out",
+
+            scrollTrigger: {
+                trigger: element,
+                start: "bottom+=300 top",
+                end: "+=250",
+                scrub: true,
+              },
+        })
+    }, [])
     return(
-        <Headers>
+        <Headers ref={headerRef} >
             <Logo>
             <img src={logo}  alt="logo"/>
             <p>KayoTimeDetails</p>
           </Logo>
           <Nav>
-              <a href="#home">Home</a>
+              <a href="#home" >Home</a>
               <a href="#about">About</a>
               <a href="#services">Services</a>
               <a href="#reviews">Reviews</a>
-              <a href="#contact">
+              <a href="#contact" >
                   <Button>
                       Contact Us
                   </Button>
@@ -210,8 +238,10 @@ const Header = () => {
                   </Button>
             </a>
              </MobileMenu>
+             
         </Headers>
     )
 }
+
 
 export default Header;

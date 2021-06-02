@@ -4,7 +4,10 @@ import PhotoBlock from '../../components/PhotoBlock/PhotoBlock'
 import soap from '../../assets/soap.png'
 import chemicalguys from '../../assets/chemicalguysproducts.png'
 import meguiars from '../../assets/meguiarsproducts.png'
+import gsap from "gsap";
+import { useEffect, useRef } from "react";
 
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 const ServiceSection = styled.div`
 
 width: 100vw;
@@ -113,6 +116,201 @@ align-items: center;
 
 
 const Services = () => {
+    const ref = useRef();
+  gsap.registerPlugin(ScrollTrigger);
+  const revealRefs = useRef([]);
+  revealRefs.current = [];
+
+  useEffect(() => {
+    const element = ref.current;
+    ////
+    const mq = window.matchMedia("(max-width: 48em)");
+    const t1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: document.getElementById("services"),
+
+        start: "top top+=180",
+
+        end: "bottom bottom",
+
+        pin: element,
+        pinReparent: true,
+      },
+    });
+    t1.fromTo(
+      document.getElementById("line"),
+
+      {
+        height: "15rem",
+      },
+      {
+        height: "3rem",
+        duration: 2,
+        scrollTrigger: {
+          trigger: document.getElementById("line"),
+          start: "top top+=200",
+          end: "bottom top+=220",
+          scrub: true,
+        },
+      }
+    );
+
+    revealRefs.current.forEach((el, index) => {
+      // console.log(el.childNodes);
+      if (mq.matches) {
+        t1.from(
+          el.childNodes[0],
+
+          {
+            x: -300,
+            opacity: 0,
+            duration: 2,
+
+            ease: "power2",
+            scrollTrigger: {
+              id: `section-${index + 1}`,
+              trigger: el,
+              start: "top center+=200",
+              end: "bottom bottom-=100",
+              scrub: true,
+              snap: true,
+              //
+              // toggleActions: "play none none reverse",
+            },
+          }
+        )
+          .to(el.childNodes[1], {
+            transform: "scale(0)",
+
+            ease: "power2.inOut",
+
+            scrollTrigger: {
+              id: `section-${index + 1}`,
+              trigger: el.childNodes[1],
+              start: "top center",
+              end: "bottom center",
+              scrub: true,
+              snap: true,
+
+              // toggleActions: "play none none reverse",
+            },
+          })
+          .from(
+            el.childNodes[2],
+
+            {
+              y: 400,
+
+              duration: 2,
+
+              ease: "power2",
+              scrollTrigger: {
+                id: `section-${index + 1}`,
+                trigger: el,
+                start: "top center+=100",
+                end: "bottom bottom-=200",
+                scrub: true,
+                snap: true,
+                //
+                // toggleActions: "play none none reverse",
+              },
+            }
+          )
+          .to(
+            el,
+
+            {
+              opacity: 0,
+
+              ease: "power2",
+              scrollTrigger: {
+                id: `section-${index + 1}`,
+                trigger: el,
+                start: "top top+=300",
+                end: "center top+=300",
+                scrub: true,
+              },
+            }
+          );
+      } else {
+        t1.from(
+          el.childNodes[0],
+
+          {
+            x: -300,
+            opacity: 0,
+            duration: 2,
+
+            ease: "power2",
+            scrollTrigger: {
+              id: `section-${index + 1}`,
+              trigger: el,
+              start: "top center+=100",
+              end: "bottom bottom-=200",
+              scrub: true,
+              snap: true,
+              //
+              // toggleActions: "play none none reverse",
+            },
+          }
+        )
+          .to(el.childNodes[1], {
+            transform: "scale(0)",
+
+            ease: "power2.inOut",
+
+            scrollTrigger: {
+              id: `section-${index + 1}`,
+              trigger: el.childNodes[1],
+              start: "top center",
+              end: "bottom center",
+              scrub: true,
+              snap: true,
+
+              // toggleActions: "play none none reverse",
+            },
+          })
+          .from(
+            el.childNodes[2],
+
+            {
+              y: 400,
+
+              duration: 2,
+
+              ease: "power2",
+              scrollTrigger: {
+                id: `section-${index + 1}`,
+                trigger: el,
+                start: "top center+=100",
+                end: "bottom bottom-=200",
+                scrub: true,
+                snap: true,
+                //
+                // toggleActions: "play none none reverse",
+              },
+            }
+          )
+          .to(
+            el,
+
+            {
+              opacity: 0,
+
+              ease: "power2",
+              scrollTrigger: {
+                id: `section-${index + 1}`,
+                trigger: el,
+                start: "top top+=200",
+                end: "center top+=300",
+                scrub: true,
+              },
+            }
+          );
+      }
+    });
+  }, []);
+
     return(
        <ServiceSection id="services">
            <Background>
