@@ -14,7 +14,12 @@ background: var(--white);
 color: var(--black);
 position: relative;
 z-index: 500;
-
+@media only Screen and (max-width: 64em) {
+    padding: 0.5rem 3rem;
+  }
+  @media only Screen and (max-width: 40em) {
+    padding: 0.5rem 1.5rem;
+  }
 
 
 
@@ -179,31 +184,58 @@ const Header = () => {
 
     const headerRef = useRef(null);
     gsap.registerPlugin(ScrollTrigger);
-
+// sets up animation for nav bar to scroll with page
     useEffect(()=>{
         let element = headerRef.current;
-        gsap.to(element,{
-            position: "fixed",
-            top: "1rem",
-            left: "3rem",
-            right: "3rem",
-            padding: "1.5rem 2rem",
-    
-            borderRadius: "50px",
-    
-            border: "3px solid var(--white)",
-    
-            duration: 1,
-            ease: "power1.out",
-
-            scrollTrigger: {
+        const mq = window.matchMedia("(max-width:40em)");
+        // for mobile
+        if (mq.matches) {
+            gsap.to(element, {
+              position: "fixed",
+              top: "0",
+              left: "0",
+              right: "4.5rem",
+              padding: "1rem 1rem",
+      
+              borderRadius: "0 0 50px 50px",
+      
+              border: "2px solid var(--white)",
+      
+              duration: 1,
+              ease: "power1.out",
+      
+              scrollTrigger: {
+                trigger: element,
+                start: "bottom+=200 top",
+                end: "+=100",
+                scrub: true,
+              },
+            });
+          } else {
+            //   regular webpage setup
+            gsap.to(element, {
+              position: "fixed",
+              top: "1rem",
+              left: "3rem",
+              right: "3rem",
+              padding: "1.5rem 2rem",
+      
+              borderRadius: "50px",
+      
+              border: "4px solid var(--bmwred)",
+      
+              duration: 1,
+              ease: "power1.out",
+      
+              scrollTrigger: {
                 trigger: element,
                 start: "bottom+=300 top",
                 end: "+=250",
                 scrub: true,
               },
-        })
-    }, [])
+            });
+          }
+        }, []);
     return(
         <Headers ref={headerRef} >
             <Logo>
