@@ -31,7 +31,7 @@ top: 0;
 left: 0;
 bottom: 0;
 width: 100vw;
-height: 100%;
+height: 85vw;
 background: var(--black);
 background-size: auto 100vh;
 z-index: -1;
@@ -85,6 +85,7 @@ border-top: 2rem solid var(--white);
 const Content = styled.div`
 display: flex;
 margin: 10rem 10rem;
+/* margin: 3rem 10rem; */
 align-items: center;
 justify-content: space-between;
 position: relative;
@@ -171,7 +172,40 @@ const Services = () => {
                         {
                             x: 300,
                             opacity: 0,
-                            duration: 2,
+                            duration: 4,
+                            ease: "power2.inOut",
+
+                            scrollTrigger:{
+                                trigger: el,
+                                id: `section-${index + 1}`,
+                                start: "top center+=200",
+                                end: "bottom bottom-=200",
+                                scrub: true,
+                                snap: true,
+                                markers: true,
+                            }
+                        }
+                    ).to(
+                        el.childNodes[1],
+                        {
+                            transform: "scale(0)",
+                            duration: 4,
+                            ease: "power2",
+
+                            scrollTrigger:{
+                                trigger: el.childNodes[1],
+                                id: `section-${index + 1}`,
+                                start: "top center",
+                                end: "bottom center",
+                                scrub: true,
+                                snap: true,
+                                markers: true,
+                            }
+                        }
+                    ).from(
+                        el.childNodes[2],
+                        {
+                            opacity: 0,
                             ease: "power2",
 
                             scrollTrigger:{
@@ -184,10 +218,26 @@ const Services = () => {
                                 markers: true,
                             }
                         }
-                    )
-                }
-            )
+                    ).to(
+                        el, {
+                            y: 400,
+                            duration: 4,
+                            ease: "power2",
 
+                            scrollTrigger:{
+                                trigger: el,
+                                id: `section-${index + 1}`,
+                                start: "top center+=200",
+                                end: "center top+=300",
+                                scrub: true,
+                                snap: true,
+                                markers: true,
+                            }
+                        }
+                
+                    )
+                    }
+                ) 
     }, [])
 
     return(
@@ -267,6 +317,18 @@ const Services = () => {
                 <img src={meguiars} alt="soap" height="400" width="400" />
                 </OBJ>
                <PhotoBlock picture="diamondwheel.png"/>
+           </Content>
+           <Content ref={addToRefs}>
+               <TextBlock 
+                topic=""
+                title=""
+                subText=""
+               
+               />
+               <OBJ>
+                
+                </OBJ>
+               
            </Content>
        </ServiceSection>
     )
