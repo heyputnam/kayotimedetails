@@ -324,7 +324,7 @@ const Services = () => {
                <PhotoBlock picture="diamondwheel.png"/>
            </Content>
            <Content ref={addToRefs}>
-              <TextBlock></TextBlock>
+              <TextBlock topic="{style=display:none}"></TextBlock>
                <OBJ>
                 
                 </OBJ>
