@@ -1,5 +1,6 @@
-import logo from '../../assets/caricon.png'
+import logo from '../../assets/realcar.png'
 import styled from 'styled-components'
+import kayologo from '../../assets/gloves2.png'
 import { gsap } from 'gsap'
 import { useState, setState, useRef, useEffect } from 'react'
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
@@ -10,7 +11,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 1rem 1rem;
-background: var(--steel);
+background: var(--blue-black);
 color: var(--black);
 position: relative;
 z-index: 500;
@@ -32,7 +33,7 @@ width: 3rem;
 height: auto;
 cursor: pointer;
 img{
-    margin-right: 0.5rem;
+  
 }
 p{
     letter-spacing: 4px;
@@ -60,7 +61,7 @@ justify-content: space-between;
 
     a{
     font-weight: 600;
-    color: var(--black);
+    color: var(--white);
     line-height: 1.5;
 
         &::after{
@@ -92,11 +93,11 @@ cursor: pointer;
 /* box-shadow:  0px 3px 16px -3px white; */
      &:hover{
          transform: scale(1.1);
-         box-shadow:  0px 3px 16px -3px #E7222E;
+         box-shadow:  0px 3px 16px -3px white;
      }
      &:focus{
          transform: scale(0.9);
-         box-shadow:  0px 4px 16px -3px #5e87ff;
+         box-shadow:  0px 4px 16px -3px white;
     }
 
 
@@ -222,8 +223,8 @@ const Header = () => {
               padding: "1.5rem 2rem",
       
               borderRadius: "50px",
-      
-              border: "4px solid var(--bmwred)",
+              border: "2px solid var(--white)",
+        
       
               duration: 1,
               ease: "power1.out",
@@ -240,8 +241,8 @@ const Header = () => {
     return(
         <Headers ref={headerRef} >
             <Logo>
-            <img src={logo}  alt="logo"/>
-            <p>KayoTimeDetails</p>
+            <img src={kayologo}  alt="logo"/>
+            {/* <p>KayoTimeDetails</p> */}
           </Logo>
           <Nav>
               <a href="#home" >Home</a>

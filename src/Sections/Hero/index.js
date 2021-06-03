@@ -3,16 +3,16 @@ import Blue from '../../assets/bmwblueblob.png'
 import Red from '../../assets/bmwredblob.png'
 import Light from '../../assets/bmwlightblob.png'
 import BoxingLogo from '../../assets/whitearrow.png'
-import bmwAnimCar from '../../assets/bmw2.png'
+import bmwAnimCar from '../../assets/realcar.png'
 import heart from '../../assets/heartlogo.png'
-
-
+import gloves from '../../assets/orange.png'
+import water from '../../assets/water.png'
 
 
 const HeroSection = styled.div`
 width: 100vw;
 height: 45vw;
-background-color: black;
+background-color: var(--white);
 color: white;
 display: flex;
 justify-content: center;
@@ -32,43 +32,7 @@ position: relative;
 
 `
 
-const Blobs = styled.div`
-width: 100%;
-/* if you leave as realitive it messes up the whole page  */
-position: absolute;
-right: 0;
-@media only Screen and (max-width: 48em) {
-    opacity: 0.5;
-  }
-  
 
-
-
-`;
-const BlueBlob = styled.div`
-  width: calc(24% + 23vw);
-  position: absolute;
-  right: 0;
-  top: calc(3rem + 5vw);
-  z-index: 6;
-/* top: calc(5rem + 5vw);
-z-index: 6; */
-
-`;
-const RedBlob = styled.div`
-  width: calc(26% + 20vw);
-  position: absolute;
-  right: 0;
-
-
-`;
-const LightBlob = styled.div`
-   width: calc(23% + 23vw);
-  position: absolute;
-  right: calc(3.5rem + 3.5vw);
-  top: calc(2rem + 2vw);
-  z-index: 5;
-`;
 
 const MainContent = styled.div`
  display: flex;
@@ -90,11 +54,13 @@ const MainContent = styled.div`
 const LeftBlock = styled.div`
 display: flex;
 flex-direction: column;
-align-items: flex-start;
+align-items: center;
 width: 50%;
 line-height: 1.5;
-
-@media only Screen and (max-width: 48em){
+margin-top: -15rem;
+right: 0;
+/* changed for responsive */
+@media only Screen and (max-width: 52em){
     width: 80%;
     text-align: center;
     align-items: center;
@@ -115,20 +81,21 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
-background-color: var(--bmwblue);
+/* background-color: var(--bmwblue); */
 font-weight: 700;
-font-size: calc(0.3rem + 0.3vw);
-padding: 0.5rem 1rem;
-border-radius: 20px;
-width: calc(4rem + 4vw);
+font-size: calc(0.6rem + 0.5vw);
+padding: 0.5rem;
+color: var(--raisin-black);
+/* border-radius: 20px;
+width: calc(4rem + 4vw); */
 
 
 
 `
 
 const Circle = styled.img`
-height: 1rem;
-width: 1rem;
+height: 1.5rem;
+width: 1.5rem;
 margin-right: 0.3rem;
 
 
@@ -138,18 +105,17 @@ margin-right: 0.3rem;
 `
 
 const Title = styled.h1`
-font-size: calc(2rem + 1vw);
-line-height: 1.2;
-padding: 0.5rem 0;
-
-
+font-size: calc(1.5rem + 1vw);
+line-height: 3rem;
+/* padding: 0.5rem 0; */
+color: var(--grey-blue);
 
 
 `
 
 const SubText = styled.h5`
 
-font-size: calc(0.5rem + 0.5vw);
+font-size: calc(0.8rem + 0.5vw);
   color: var(--bmwblue);
   @media only Screen and (max-width: 48em){
       color: var(--white);
@@ -165,7 +131,7 @@ font-size: calc(0.5rem + 0.5vw);
 const CTA = styled.div`
 
 padding: 0.5rem 1rem;
-margin-top: 1rem;
+margin-top: 3rem;
 border-radius: 20px;
 cursor: pointer;
 font-size: calc(0.5rem + 0.5vw);
@@ -173,27 +139,32 @@ font-weight: 700;
 display: flex;
 justify-content: center;
 align-items: center;
-background-color: var(--bmwred);
+background-color: var(--blue-black);
 transition: all 0.2s;
   img{
-      width: 1.5rem
+      width: 1.5rem;
   }
 &:active{
     transform: scale(1.9);
-    box-shadow:  0px 1px 15px -3px white;
+    box-shadow:  5px 4px 16px -3px #5e87ff;
+    
 }
 &:hover{
     transform: scale(1.1);
-    box-shadow:  0px 1px 15px -3px white;
+    box-shadow:  5px 4px 16px -3px #5e87ff;
 }
 
 `
 
 const CarImage = styled.img`
+display: flex;
 max-width: 100%;
-width: calc(30% + 30vw);
+width: calc(45% + 45vw);
 z-index: 7;
 height: auto;
+position: absolute;
+
+
 /* makes the image move up and down and look like its floating */
 /* couldnt figure out how to make it a variable outside of the styled component */
 
@@ -209,6 +180,9 @@ animation: move 2.5s ease infinite;
 align-items: flex-start;
 position: absolute;
 bottom: 0;
+/* left: 10.8rem; */
+align-items: center;
+
 opacity: 0.35;
 width: calc(30% + 20vw);
 }
@@ -223,26 +197,28 @@ width: calc(30% + 20vw);
 
 
 ` 
+const Gloves = styled.div`
+display: flex;
+position: absolute;
+right: 4rem;
 
+@media only Screen and (max-width: 79em){
+    margin-top: 6rem;
+    height: 75%;
+    width: 45%;
+    right: 2rem;
+}
+
+
+@media only Screen and (max-width: 48em){
+    display: none;
+}
+
+`
 
 const Hero = () => {
     return(
         <HeroSection id="home">
-            <Blobs>
-
-                <BlueBlob>
-                <img src={Red} alt="" width="400" height="400" />
-
-                </BlueBlob>
-                <RedBlob>
-                <img src={Blue} alt="" width="400" height="400" />
-
-                </RedBlob>
-                <LightBlob>
-                <img src={Light} alt="" width="400" height="400" />
-
-                </LightBlob>
-            </Blobs>
             <MainContent>
             <LeftBlock>
                 <Topic>
@@ -254,8 +230,9 @@ const Hero = () => {
                 <SubText>Knocking out expectations daily</SubText>
 
                 <CTA>
-                Schedule Today &nbsp;
+                Call to Sceduale Today  
             <img src={BoxingLogo} alt="cta" width="400" height="400" />
+
                  </CTA>
             </LeftBlock>
            
