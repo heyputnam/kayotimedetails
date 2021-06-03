@@ -10,7 +10,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 1rem 1rem;
-background: var(--white);
+background: var(--steel);
 color: var(--black);
 position: relative;
 z-index: 500;
