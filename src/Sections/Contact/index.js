@@ -11,6 +11,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+margin-top: 3rem;
 `
 
 
@@ -144,17 +145,6 @@ const Contact = () => {
     return(
         <ContactSection id="contact">
          <Title>Get In Touch</Title>
-         <Icons>
-             <a href="https//facebook.com/">
-                 <img src={facebook}></img>
-             </a>
-             <a href="https//instagram.com/">
-                 <img src={instagram}></img>
-             </a>
-             <a href="https//google.com/">
-                 <img src={google}></img>
-             </a>
-         </Icons>
         <Form>
             <Row>
             <input type="text" name="name" placeholder="your name"></input>
@@ -169,6 +159,17 @@ const Contact = () => {
                 </button>
             </div>
         </Form>
+        <Icons>
+             <a href="https//facebook.com/">
+                 <img src={facebook}></img>
+             </a>
+             <a href="https://www.instagram.com/kayotimedetails/?hl=en">
+                 <img src={instagram}></img>
+             </a>
+             <a href="https://www.instagram.com/kayotimedetails/?hl=en">
+                 <img src={google}></img>
+             </a>
+         </Icons>
 
         </ContactSection>
     )

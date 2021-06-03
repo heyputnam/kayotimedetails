@@ -164,6 +164,7 @@ border-radius: 20px;
 margin: 0.5rem;
 overflow: hidden;
 
+
     a{
         color: var(--white);
         font-weight: 600;

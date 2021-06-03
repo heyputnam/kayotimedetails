@@ -31,7 +31,7 @@ top: 0;
 left: 0;
 bottom: 0;
 width: 100vw;
-height: 93vh;
+height: 85vh;
 background: var(--black);
 background-size: auto 100vh;
 z-index: -1;
