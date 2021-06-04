@@ -42,12 +42,12 @@ display: flex;
 flex-direction: row;
 /* justify-content: center;
 align-items: center; */
-margin-left: -2rem;
+margin-left: -2.7rem;
 top: 0;
 font-weight: 700;
 font-size: calc(0.7rem + 1vw);
 padding: 0.5rem 1rem;
-
+color: var(--blue-blue);
 width: 40%;
 
 @media only Screen and (max-width: 48em){
@@ -71,15 +71,16 @@ margin-right: 0.3rem;
 `
 
 const Title = styled.h1`
-font-size: calc(2rem + 1vw);
+font-size: calc(2rem + 1.7vw);
 line-height: 1.2;
 padding: 0.5rem 0;
 font-family: primot, sans-serif;
 
 font-weight: 600;
-
+display: flex;
+margin-left: -1.5rem;
 font-style: normal;
-color: var(--blue-black);
+color: #7187A9;
 
 
 @media only Screen and (max-width: 48em){

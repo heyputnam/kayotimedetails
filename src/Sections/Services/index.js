@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import TextBlock from '../../components/TextBlock/TextBlock'
 import PhotoBlock from '../../components/PhotoBlock/PhotoBlock'
-import soap from '../../assets/soap.png'
-import chemicalguys from '../../assets/chemicalguysproducts.png'
-import meguiars from '../../assets/meguiarsproducts.png'
+import goldwheel from '../../assets/goldwheel.png'
+import platniumwheel from '../../assets/platniumwheel.png'
+import diamondwheel from '../../assets/diamondwheel.png'
 import { gsap } from 'gsap'
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
 import { useEffect, useRef } from 'react'
@@ -47,9 +47,9 @@ font-size: 3rem;
 margin-top: 1rem;
 position:relative;
 
-font-family: usual, sans-serif;
+font-family: primot, sans-serif;
 
-font-weight: 700;
+font-weight: 300;
 
 font-style: normal;
 
@@ -110,6 +110,11 @@ position: relative;
     &:last-child{
         margin-bottom: 2rem;
     }
+}
+
+ul{
+    list-style: none;
+    line-height: 1.6;
 }
 
 `
@@ -261,7 +266,7 @@ const Services = () => {
            </Background>
            <Content ref={addToRefs}>
                <TextBlock 
-                topic="Starting at $125"
+                topic=""
                 title="Gold Package"
                 subText={<ul>
                     <li>Exterior Wash</li>
@@ -273,13 +278,13 @@ const Services = () => {
                
                />
                <OBJ>
-               <img src={soap} alt="soap" height="400" width="400" />
+               <img src={goldwheel} alt="soap" height="400" width="400" />
                </OBJ>
-               <PhotoBlock picture="goldwheel.png"/>
+               <PhotoBlock price="$125"/>
            </Content>
            <Content ref={addToRefs}>
                <TextBlock 
-                topic="Starting at $200"
+                topic=" "
                 title="Platinum Package"
                 subText={<ul>
                     <li>Heavy Exterior Wash</li>
@@ -295,13 +300,13 @@ const Services = () => {
                
                />
                <OBJ>
-                <img src={chemicalguys} alt="soap" height="400" width="400" />
+                <img src={platniumwheel} alt="soap" height="400" width="400" />
                 </OBJ>
-               <PhotoBlock picture="platniumwheel.png"/>
+               <PhotoBlock price={"$200"}/>
            </Content>
            <Content ref={addToRefs}>
                <TextBlock 
-                topic="Starting at $300"
+                topic=" "
                 title="Diamond Package"
                 subText={<ul>
                     <li>Heavy Exterior Wash</li>
@@ -326,12 +331,17 @@ const Services = () => {
                
                />
                <OBJ>
-                <img src={meguiars} alt="soap" height="400" width="400" />
+                <img src={diamondwheel} alt="soap" height="400" width="400" />
                 </OBJ>
-               <PhotoBlock picture="diamondwheel.png"/>
+               <PhotoBlock price=" $300">
+                
+               </PhotoBlock>
            </Content>
            <Content ref={addToRefs}>
-              <TextBlock topic="{style=display:none}"></TextBlock>
+               {/* fake text block to slow down  */}
+              <TextBlock
+              topic=" " 
+              ></TextBlock>
                <OBJ>
                 
                 </OBJ>

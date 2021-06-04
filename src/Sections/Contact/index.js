@@ -1,27 +1,32 @@
-import facebook from '../../assets/facebook.png'
-import instagram from '../../assets/instagram.png'
-import google from '../../assets/google.png'
+import facebook from '../../assets/facebook2.png'
+import instagram from '../../assets/instagram3.png'
+import google from '../../assets/google2.png'
 import styled from 'styled-components'
 
 const ContactSection = styled.div`
 width: 100vw;
+
 padding: calc(2.5rem + 2.5vw) 0;
 background: var(--black);
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-margin-top: 3rem;
+margin-top: 5rem;
 `
 
 
 const Title = styled.h1`
 display: inline-block;
-font-size: 2rem;
-margin-top: 1rem;
+font-size: 2.5rem;
+margin-top: 2rem;
 position:relative;
 color: white;
+font-family: primot, sans-serif;
 
+font-weight: 400;
+
+font-style: normal;
 &::before{
     content: "";
     height: 1px;
@@ -35,6 +40,7 @@ color: white;
 }
 
 
+
 `
 
 
@@ -42,14 +48,16 @@ color: white;
 const Icons = styled.div`
    display: flex;
   margin-bottom: 3rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  
   a {
+      
     &:hover {
       img {
-        filter: invert(20%) sepia(100%) saturate(500%) hue-rotate(580deg)
-          brightness(100%) contrast(97%);
-      }
+       filter: invert(100%);
+    
     }
+}
     &:not(:last-child) {
       margin-right: 2rem;
     }
@@ -65,8 +73,11 @@ const Form = styled.form`
 display: flex;
   flex-direction: column;
   justify-content: center;
+ height: 100%;
+ margin-top: 2rem;
+
   input {
-    padding: 1rem calc(0.5rem + 1vw);
+    padding: 1rem calc(4em + 3vw);
     margin-bottom: 1rem;
     &:not(:last-child){
         margin-right: 1rem;
