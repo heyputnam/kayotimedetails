@@ -11,20 +11,31 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 1rem 1rem;
-background: var(--blue-black);
+background: radial-gradient(var(--raisin-black), black 75%);
+
+
 color: var(--black);
 position: relative;
 z-index: 500;
-font-family: usual, sans-serif;
+font-family: primot, sans-serif;
 
 font-weight: 400;
 
-font-style: italic;
+font-style: normal;
+
+
+
 @media only Screen and (max-width: 64em) {
     padding: 0.5rem 3rem;
+    &:before {
+    border-radius: 40px;
+    }
   }
   @media only Screen and (max-width: 40em) {
     padding: 0.5rem 1.5rem;
+    &:before {
+    border-radius: 35px;
+    }
   }
 
 
@@ -56,6 +67,7 @@ align-items: center;
 justify-content: space-between;
 font-size: 1.1rem;
 
+
 /* changes display for mobile screen */
 
 @media only Screen and (max-width: 48em){
@@ -66,9 +78,17 @@ font-size: 1.1rem;
 /* sets nav bar adds responsive hover */
 
     a{
-    font-weight: 400;
+    font-weight: 600;
     color: var(--white);
-    line-height: 1.5;
+    line-height: 1.3;
+    margin-left: -3rem;
+    font-family: primot, sans-serif;
+
+font-weight: 400;
+
+font-style: normal;
+
+
 
 
         &::after{
@@ -92,23 +112,28 @@ font-size: 1.1rem;
 `
 const Button = styled.button`
 background-color: var(--blue);
-padding: 0.5rem 1rem;
+padding: 0.4rem 1rem;
 border-radius: 25px;
-color: var(--white);
+color: var(---white);
+
 font-family: usual, sans-serif;
 
-font-weight: 400;
+font-weight: 700;
 
-font-style: italic;
+font-style: normal;
+
+
+
+
 cursor: pointer;
 /* box-shadow:  0px 3px 16px -3px white; */
      &:hover{
          transform: scale(1.1);
-         box-shadow:  0px 3px 16px -3px white;
+         box-shadow:  0px 3px 16px -3px black;
      }
      &:focus{
          transform: scale(0.9);
-         box-shadow:  0px 4px 16px -3px white;
+         box-shadow:  0px 4px 16px -3px black;
     }
 
 
@@ -129,7 +154,7 @@ display: none;
 
     &::before,&::after{
         content: '';
-        background: var(--black);
+        background: var(--white);
         width: 2rem;
         height: 2px;
         display: inline-block;
@@ -209,10 +234,11 @@ const Header = () => {
               left: "0",
               right: "4.5rem",
               padding: "1rem 1rem",
-      
+              
               borderRadius: "0 0 50px 50px",
       
               border: "2px solid var(--white)",
+            
       
               duration: 1,
               ease: "power1.out",
@@ -223,6 +249,7 @@ const Header = () => {
                 end: "+=100",
                 scrub: true,
               },
+            
             });
           } else {
             //   regular webpage setup
@@ -246,6 +273,7 @@ const Header = () => {
                 end: "+=250",
                 scrub: true,
               },
+            
             });
           }
         }, []);

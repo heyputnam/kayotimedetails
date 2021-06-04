@@ -43,9 +43,16 @@ z-index: -1;
 
 const Title = styled.h1`
 display: inline-block;
-font-size: 2rem;
+font-size: 3rem;
 margin-top: 1rem;
 position:relative;
+
+font-family: usual, sans-serif;
+
+font-weight: 700;
+
+font-style: normal;
+
 
 &::before{
     content: "";

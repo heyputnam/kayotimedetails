@@ -23,7 +23,7 @@ const LeftBlock = styled.div`
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-width: 50%;
+width: 70%;
 line-height: 1.5;
 color: white;
 @media only Screen and (max-width: 48em){
@@ -40,14 +40,15 @@ const Topic = styled.div`
 
 display: flex;
 flex-direction: row;
-justify-content: center;
-align-items: center;
-background-color: var(--bmwblue);
+/* justify-content: center;
+align-items: center; */
+margin-left: -2rem;
+top: 0;
 font-weight: 700;
-font-size: calc(0.3rem + 0.3vw);
+font-size: calc(0.7rem + 1vw);
 padding: 0.5rem 1rem;
-border-radius: 20px;
-width: calc(4rem + 4vw);
+
+width: 40%;
 
 @media only Screen and (max-width: 48em){
 font-size: calc(0.4rem + 0.8vw);
@@ -73,6 +74,12 @@ const Title = styled.h1`
 font-size: calc(2rem + 1vw);
 line-height: 1.2;
 padding: 0.5rem 0;
+font-family: primot, sans-serif;
+
+font-weight: 600;
+
+font-style: normal;
+color: var(--blue-black);
 
 
 @media only Screen and (max-width: 48em){
@@ -87,7 +94,7 @@ padding: 0.5rem 0;
 const SubText = styled.h5`
 
 font-size: calc(0.5rem + 0.5vw);
- color: var(--bmwblue);
+ color: var(--white);
 
  @media only Screen and (max-width: 48em){
     font-size: calc(0.5rem + 1vw)

@@ -56,12 +56,18 @@ const Title = styled.h1`
 display: flex;
 align-items: center;
 justify-content: center;
-font-size: 3rem;
-font-family: 'BioRhyme', serif;
-margin-top: 1em;
+font-size: 4rem;
+font-family: primot, sans-serif;
+
+font-weight: 400;
+
+font-style: normal;
+
+
+
 
 @media only Screen and (max-width: 40em){
-  font-size: 1rem;
+  font-size: 2rem;
 
 }
 
@@ -178,6 +184,11 @@ position: relative;
 
 width: 50%;
 position: relative;
+font-family: usual, sans-serif;
+
+font-weight: 400;
+
+font-style: italic;
 
 
 
@@ -193,8 +204,8 @@ const Text = styled.p`
 font-size: calc(0.5rem + 1vw);
 line-height: 1.7;
 margin-left: 1rem;
-color: var(--white);
-font-family: 'Poppins', sans-serif;
+color: var(--blue-blue);
+
 
 
 `
@@ -247,7 +258,7 @@ const About = () => {
         <Main>
             <div>
                 <Title>About Us</Title>
-                <CurvedLine />
+           
             </div>
             <Content>
  
