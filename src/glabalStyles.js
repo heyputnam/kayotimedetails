@@ -29,6 +29,15 @@ export const GlobalStyle = createGlobalStyle`
 --blue-blue: #1f447eff;
 
 
+--straight-header: {
+font-family: usual, sans-serif;
+
+font-weight: 400;
+
+font-style: italic;
+}
+
+
 }
 
 *,*::before,*::after{
@@ -52,7 +61,7 @@ body{
     padding: 0;
     border: 0;
     outline: 0;
-    background: var(--white);
+    background: var(--black);
     overflow-x: hidden;
 
 }

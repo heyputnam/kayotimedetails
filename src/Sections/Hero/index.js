@@ -55,7 +55,7 @@ const LeftBlock = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-width: 50%;
+width:  65%;
 line-height: 1.5;
 margin-top: -15rem;
 right: 0;
@@ -83,9 +83,14 @@ justify-content: center;
 align-items: center;
 /* background-color: var(--bmwblue); */
 font-weight: 700;
-font-size: calc(0.6rem + 0.5vw);
+font-size: calc(0.5rem + 0.8vw);
 padding: 0.5rem;
 color: var(--raisin-black);
+font-family: usual, sans-serif;
+margin-top: -3rem;
+font-weight: 400;
+
+font-style: italic;
 /* border-radius: 20px;
 width: calc(4rem + 4vw); */
 
@@ -105,54 +110,84 @@ margin-right: 0.3rem;
 `
 
 const Title = styled.h1`
-font-size: calc(1.5rem + 1vw);
-line-height: 3rem;
+font-size: calc(1rem + 2vw);
+line-height: 4rem;
 /* padding: 0.5rem 0; */
 color: var(--grey-blue);
+
+/* font-family: milk-script, sans-serif;
+
+font-weight: 400;
+
+font-style: normal; */
+
+font-family: primot, sans-serif;
+
+font-weight: 400;
+
+font-style: normal;
+
+@media only Screen and (max-width: 48em){
+    font-size: calc(2rem + 2vw);
+}
 
 
 `
 
 const SubText = styled.h5`
 
-font-size: calc(0.8rem + 0.5vw);
+font-size: calc(1rem + 0.5vw);
   color: var(--bmwblue);
+  line-height: 5rem;
   @media only Screen and (max-width: 48em){
+      line-height: 1.2rem;
+      font-size: calc(0.5rem + 0.5vw);
       color: var(--white);
-      background: var(--black);
+      background: var(--blue-blue);
+      margin-top: 1rem;
       box-shadow: 2px 0.3px 20px 0.3px var(--white);
-      border-radius: 10px;
+    
 
+  
 
   }
 
+  font-family: usual, sans-serif;
+
+font-weight: 400;
+
+font-style: italic;
 
 `
 const CTA = styled.div`
 
-padding: 0.5rem 1rem;
-margin-top: 3rem;
+padding: 0.5rem 0.5rem;
+margin-top: 1rem;
 border-radius: 20px;
 cursor: pointer;
 font-size: calc(0.5rem + 0.5vw);
-font-weight: 700;
+font-family: usual, sans-serif;
+
+font-weight: 400;
+
+font-style: italic;
 display: flex;
 justify-content: center;
 align-items: center;
 background-color: var(--blue-black);
-transition: all 0.2s;
+box-shadow: 1px 1px 20px 3px black;
+/* transition: all 0.2s; */
   img{
       width: 1.5rem;
   }
-&:active{
-    transform: scale(1.9);
-    box-shadow:  5px 4px 16px -3px #5e87ff;
-    
-}
-&:hover{
-    transform: scale(1.1);
-    box-shadow:  5px 4px 16px -3px #5e87ff;
-}
+  &:hover{
+         transform: scale(1.1);
+         box-shadow: 1px 1px 20px 3px black;
+     }
+     &:focus{
+         transform: scale(0.9);
+         box-shadow: 1px 1px 20px 3px black;
+    }
 
 `
 
@@ -227,13 +262,15 @@ const Hero = () => {
                     <span>we love cars</span>
                 </Topic>
                 <Title>Kayo Time Details</Title>
-                <SubText>Knocking out expectations daily</SubText>
+            
 
-                <CTA>
+               <CTA><div style={{ padding: "0 0.5rem 0 0"}}>
                 Call to Sceduale Today  
+                </div>
             <img src={BoxingLogo} alt="cta" width="400" height="400" />
 
                  </CTA>
+                 <SubText>Knocking out expectations daily</SubText>
             </LeftBlock>
            
           <CarImage src={bmwAnimCar} alt="car" height="400" width="400"/>

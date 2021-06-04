@@ -15,6 +15,11 @@ background: var(--blue-black);
 color: var(--black);
 position: relative;
 z-index: 500;
+font-family: usual, sans-serif;
+
+font-weight: 400;
+
+font-style: italic;
 @media only Screen and (max-width: 64em) {
     padding: 0.5rem 3rem;
   }
@@ -49,6 +54,7 @@ max-width: 40rem;
 display: flex;
 align-items: center;
 justify-content: space-between;
+font-size: 1.1rem;
 
 /* changes display for mobile screen */
 
@@ -60,9 +66,10 @@ justify-content: space-between;
 /* sets nav bar adds responsive hover */
 
     a{
-    font-weight: 600;
+    font-weight: 400;
     color: var(--white);
     line-height: 1.5;
+
 
         &::after{
         content: '';
@@ -88,7 +95,11 @@ background-color: var(--blue);
 padding: 0.5rem 1rem;
 border-radius: 25px;
 color: var(--white);
-font-weight:  600;
+font-family: usual, sans-serif;
+
+font-weight: 400;
+
+font-style: italic;
 cursor: pointer;
 /* box-shadow:  0px 3px 16px -3px white; */
      &:hover{
