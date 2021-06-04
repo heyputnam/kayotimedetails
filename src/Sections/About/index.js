@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
-import cglogo from '../../assets/chemicalguyslogo.png'
-import mlogo from '../../assets/meguiarslogo.png'
-import logo from '../../assets/wave.png'
+
 import logo2 from '../../assets/wave2.png'
 import kayologo from '../../assets/kayo-logo.png'
 
@@ -18,15 +16,7 @@ align-items: center;
 background: var(--black);
 color: var(--white);
 `
-const Waves = styled.img`
-width: 100%;
-position: absolute;
-top: -1rem;
-height: auto;
 
-display: none;
-
-`
 
 
 const Main = styled.div`
@@ -74,26 +64,7 @@ font-style: normal;
 
 `
 
-const CurvedLine = styled.div`
-width: 8rem;
-height: 2rem;
-border: 5px solid var(--blue-black);
-border-color: var(--blue-black) transparent transparent ;
-border-radius: 150%/60px 70px 0 0;
-justify-content: center;
-align-items: center;
-margin-left: 50%;
 
-@media only Screen and (max-width: 40em){
- width: 7rem;
-}
-
-
-
-
-
-
-`
 
 const Content = styled.div`
 display: flex;
@@ -109,41 +80,11 @@ align-items: center;
 
 
 `
-const CgLogo = styled.img`
-position: absolute;
-bottom: -12rem;
-right: 8rem;
-height: calc(10rem + 10w);
-width: calc(10rem + 10vw);
-padding: 4rem;
 
 
-`
-const MLogo = styled.img`
-position: absolute;
-right: 30rem;
-height:calc(8rem + 8vw);
-width:calc(8rem + 8vw);
-bottom: -10rem;
 
 
-`
-const BrandLogo = styled.div`
-display: flex;
-justify-content: space-around;
-align-items: center;
-z-index: 5;
-width: 2rem;
-height: 2rem;
 
-
-@media only Screen and (max-width: 40em){
-display: none ;
-
-}
-
-
-`
 
 
 const KayoLogo = styled.img`
@@ -248,13 +189,8 @@ const About = () => {
     return(
         <AboutSection id="about">
            
-       <Waves  src={logo} height="400" width="400"/>
-       {/* <BrandLogo>
-       
-        <CgLogo src={cglogo} height="200" width="200" />
-        <MLogo src={mlogo} height="200" width="200" />
-       
-        </BrandLogo> */}
+
+     
         <Main>
             <div>
                 <Title>About Us</Title>

@@ -53,13 +53,13 @@ const Footer = () => {
            <RightText>
         Reach out via 
         <a href="https://linkedin.com">
-            <img src={linkedin} />
+            <img src={linkedin} alt=""/>
         </a>
         <a href="https://github.com">
-            <img src={github} />
+            <img src={github} alt=""/>
         </a>
         <a href="https://heyputnam.com">
-            <img src={hand} />
+            <img src={hand} alt=""/>
         </a>
            </RightText>
         </FooterSection>

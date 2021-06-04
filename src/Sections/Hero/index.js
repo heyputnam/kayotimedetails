@@ -1,12 +1,9 @@
-import styled, { keyframes } from 'styled-components'
-import Blue from '../../assets/bmwblueblob.png'
-import Red from '../../assets/bmwredblob.png'
-import Light from '../../assets/bmwlightblob.png'
+import styled from 'styled-components'
+
 import BoxingLogo from '../../assets/whitearrow.png'
 import bmwAnimCar from '../../assets/realcar.png'
 import heart from '../../assets/heartlogo.png'
-import gloves from '../../assets/orange.png'
-import water from '../../assets/water.png'
+
 
 
 const HeroSection = styled.div`
@@ -232,24 +229,7 @@ width: calc(30% + 20vw);
 
 
 ` 
-const Gloves = styled.div`
-display: flex;
-position: absolute;
-right: 4rem;
 
-@media only Screen and (max-width: 79em){
-    margin-top: 6rem;
-    height: 75%;
-    width: 45%;
-    right: 2rem;
-}
-
-
-@media only Screen and (max-width: 48em){
-    display: none;
-}
-
-`
 
 const Hero = () => {
     return(

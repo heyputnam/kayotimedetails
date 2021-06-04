@@ -1,8 +1,8 @@
-import logo from '../../assets/realcar.png'
+
 import styled from 'styled-components'
 import kayologo from '../../assets/bg.jpg'
 import { gsap } from 'gsap'
-import { useState, setState, useRef, useEffect } from 'react'
+import { useState,  useRef, useEffect } from 'react'
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
 
 

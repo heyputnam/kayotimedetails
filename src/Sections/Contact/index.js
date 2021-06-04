@@ -213,7 +213,7 @@ const Contact = () => {
             <input id="form" type="text" name="phone" placeholder="enter a contact number" value={toSend.phone}
     onChange={handleChange}></input>
             </Row>
-            <textarea id="form" name="message" id="" cols="30" rows="2" placeholder="your message" value={toSend.message}
+            <textarea id="form" name="message"  cols="30" rows="2" placeholder="your message" value={toSend.message}
     onChange={handleChange}></textarea>
             
             <div style={{margin: "0 auto"}}>
@@ -223,14 +223,14 @@ const Contact = () => {
             </div>
         </Form>
         <Icons>
-             <a href="https://www.facebook.com/kayotimedetails">
-                 <img src={facebook}></img>
+             <a href="https://www.facebook.com/kayotimedetails" alt="">
+                 <img src={facebook} alt=""></img>
              </a>
-             <a href="https://www.instagram.com/kayotimedetails/?hl=en">
-                 <img src={instagram}></img>
+             <a href="https://www.instagram.com/kayotimedetails/?hl=en" alt="">
+                 <img src={instagram} alt=""></img>
              </a>
-             <a href="https://www.google.com/maps/place/Kayo+Time+Details/@38.9875421,-76.5283712,15z/data=!4m5!3m4!1s0x0:0x9063af6d112b428!8m2!3d38.9875421!4d-76.5283712">
-                 <img src={google}></img>
+             <a href="https://www.google.com/maps/place/Kayo+Time+Details/@38.9875421,-76.5283712,15z/data=!4m5!3m4!1s0x0:0x9063af6d112b428!8m2!3d38.9875421!4d-76.5283712" alt="">
+                 <img src={google} alt=""></img>
              </a>
          </Icons>
 
