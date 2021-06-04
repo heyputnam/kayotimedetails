@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// using global styles
+import { GlobalStyle } from './glabalStyles'
+
+import{ lazy, Suspense } from 'react';
+
+
+const Home = lazy(()=> import("./Pages/Home/Home"))
+const Header = lazy(()=> import("./components/Header/Header"))
+const Footer = lazy(()=> import("./components/Footer/Footer"))
+const ScrollToTop = lazy(()=> import("./components/ScrollToTop/ScrollToTop"))
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section >
+      <Suspense fallback={null}>
+    <GlobalStyle />
+    <Header />
+    <Home />
+    <Footer />
+    <ScrollToTop />
+      </Suspense>
+    
+    </section> 
   );
 }
 
