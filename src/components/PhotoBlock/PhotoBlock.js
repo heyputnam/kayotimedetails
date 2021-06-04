@@ -22,7 +22,7 @@ font-weight: 700;
 font-style: normal;
 }
 p{
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: var(--white);
    
     font-family: primot, sans-serif;

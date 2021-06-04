@@ -83,7 +83,7 @@ const Reviews = () => {
     return(
         <ReviewsSection id="reviews">
           <Background>
-               <Title>What Others are Saying</Title>
+               <Title>What Others are Saying.</Title>
                
            </Background>
             <Review>

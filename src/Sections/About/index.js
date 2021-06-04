@@ -186,9 +186,9 @@ width: 50%;
 position: relative;
 font-family: usual, sans-serif;
 
-font-weight: 400;
+font-weight: 700;
 
-font-style: italic;
+font-style: normal;
 
 
 
@@ -270,9 +270,9 @@ const About = () => {
         
                 <Text> Here at Kayo Time Details we're committed to protecting and mantaining your vehicals, proudly detailing vehicals of Annapolis and the surrounding areas. We offer a full service indoor detailing, either drop your car off or let us pick it up for you(limited to agreement). Sceduale an appoitment today and let us remind you what you car looks like new.</Text>
                 <div style={{marginLeft: "0.5rem"}}>
-                    <Circle style={{ backgroundColor: "var(--raisin-black)"}}/>
-                    <Circle style={{ backgroundColor: "var(--raisin-black)"}}/>
-                    <Circle style={{ backgroundColor: "var(--raisin-black)"}}/>
+                    <Circle style={{ backgroundColor: "#898c91"}}/>
+                    <Circle style={{ backgroundColor: "#898c91"}}/>
+                    <Circle style={{ backgroundColor: "#898c91"}}/>
                 </div>
                </AboutText>
             </Content>

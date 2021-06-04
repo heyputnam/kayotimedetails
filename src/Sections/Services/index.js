@@ -260,7 +260,7 @@ const Services = () => {
     return(
        <ServiceSection id="services">
            <Background ref={ref}>
-               <Title>What We Do</Title>
+               <Title>What We Do.</Title>
                <Line id="line"/>
                <Triangle />
            </Background>
