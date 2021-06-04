@@ -49,8 +49,10 @@ font-style: normal;
   }
   @media only Screen and (max-width: 40em) {
     padding: 0.5rem 1.5rem;
+    width: 100%;
     &:before {
     border-radius: 35px;
+  
     }
   }
 
