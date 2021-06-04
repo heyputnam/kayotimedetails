@@ -2,6 +2,12 @@ import facebook from '../../assets/facebook2.png'
 import instagram from '../../assets/instagram3.png'
 import google from '../../assets/google2.png'
 import styled from 'styled-components'
+import { useState } from 'react';
+import { send } from 'emailjs-com';
+import{ init } from 'emailjs-com';
+
+
+// init("user_n851EwkEFNDS5NLsWvsH7");
 
 const ContactSection = styled.div`
 width: 100vw;
@@ -165,19 +171,53 @@ const Row = styled.div`
 
 
 const Contact = () => {
+    const [toSend, setToSend] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+      });
+
+      init("user_n851EwkEFNDS5NLsWvsH7");
+      const onSubmit = (e) => {
+       e.preventDefault();
+        send(
+            'service_v3brxqf',
+            'template_48v3j9h',
+            toSend,
+            'user_n851EwkEFNDS5NLsWvsH7'
+          )
+            .then((response) => {
+              console.log('SUCCESS!', response.status, response.text);
+            })
+            .catch((err) => {
+              console.log('FAILED...', err);
+            });
+           e.target.value = '';
+      };
+    
+      const handleChange = (e) => {
+        setToSend({ ...toSend, [e.target.name]: e.target.value });
+      };
+    
+  
     return(
         <ContactSection id="contact">
          <Title>Get In Touch</Title>
-        <Form>
+        <Form id="form" onSubmit={onSubmit}>
             <Row>
-            <input type="text" name="name" placeholder="your name"></input>
-            <input type="text" name="email" placeholder="enter a working email"></input>
-            <input type="text" name="phone" placeholder="enter a contact number"></input>
+            <input id="form" type="text" name="name" placeholder="your name"  value={toSend.name}
+    onChange={handleChange}></input>
+            <input id="form" type="text" name="email" placeholder="enter a working email"  value={toSend.email}
+    onChange={handleChange}></input>
+            <input id="form" type="text" name="phone" placeholder="enter a contact number" value={toSend.phone}
+    onChange={handleChange}></input>
             </Row>
-            <textarea name="message" id="" cols="30" rows="2" placeholder="your message"></textarea>
+            <textarea id="form" name="message" id="" cols="30" rows="2" placeholder="your message" value={toSend.message}
+    onChange={handleChange}></textarea>
             
             <div style={{margin: "0 auto"}}>
-                <button>
+                <button type="submit"> 
                     Submit
                 </button>
             </div>

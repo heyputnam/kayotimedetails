@@ -10,6 +10,7 @@ const Footer = lazy(()=> import("./components/Footer/Footer"))
 const ScrollToTop = lazy(()=> import("./components/ScrollToTop/ScrollToTop"))
 
 function App() {
+  
   return (
     <section >
       <Suspense fallback={null}>
