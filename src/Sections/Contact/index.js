@@ -13,6 +13,11 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 margin-top: 5rem;
+font-family: primot, sans-serif;
+
+font-weight: 400;
+
+font-style: normal;
 `
 
 
@@ -76,6 +81,7 @@ display: flex;
  height: 100%;
  margin-top: 2rem;
 
+
   input {
     padding: 1rem calc(4em + 3vw);
     margin-bottom: 1rem;
@@ -119,10 +125,16 @@ display: flex;
   }
   button {
     padding: 0.8rem 2rem;
-    background-color: var(--white);
+    
+    background-color: var(--blue-blue);
     border-radius: 20px;
     font-size: 1.2rem;
-    color: #0a0b10;
+    color: white;
+    font-family: primot, sans-serif;
+
+font-weight: 400;
+
+font-style: normal;
     cursor: pointer;
     transition: transform 0.3s;
     &:hover {

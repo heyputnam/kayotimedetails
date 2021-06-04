@@ -88,7 +88,7 @@ padding: 0.5rem;
 color: var(--raisin-black);
 font-family: usual, sans-serif;
 margin-top: -3rem;
-font-weight: 400;
+font-weight: 600;
 
 font-style: italic;
 /* border-radius: 20px;
@@ -154,7 +154,7 @@ font-size: calc(1rem + 0.5vw);
 
   font-family: usual, sans-serif;
 
-font-weight: 400;
+font-weight: 500;
 
 font-style: italic;
 
