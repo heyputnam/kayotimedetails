@@ -15,7 +15,8 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-
+background: var(--black);
+color: var(--white);
 `
 const Waves = styled.img`
 width: 100%;
@@ -23,7 +24,7 @@ position: absolute;
 top: -1rem;
 height: auto;
 
-
+display: none;
 
 `
 
@@ -52,13 +53,21 @@ flex-direction: column;
 `
 
 const Title = styled.h1`
-display: inline-block;
-font-size: 3rem;
-font-family: 'BioRhyme', serif;
-margin-top: 1em;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 4rem;
+font-family: primot, sans-serif;
+
+font-weight: 400;
+
+font-style: normal;
+
+
+
 
 @media only Screen and (max-width: 40em){
-  font-size: 1rem;
+  font-size: 2rem;
 
 }
 
@@ -68,9 +77,12 @@ margin-top: 1em;
 const CurvedLine = styled.div`
 width: 8rem;
 height: 2rem;
-border: 5px solid var(--bmwred);
-border-color: var(--bmwred) transparent transparent ;
+border: 5px solid var(--blue-black);
+border-color: var(--blue-black) transparent transparent ;
 border-radius: 150%/60px 70px 0 0;
+justify-content: center;
+align-items: center;
+margin-left: 50%;
 
 @media only Screen and (max-width: 40em){
  width: 7rem;
@@ -139,9 +151,11 @@ display: flex;
 justify-content: center;
 align-content: center;
 width: 40%;
-bottom: 5rem;
+bottom: 4rem;
+background: transparent;
+
 /* box-shadow: 4px 40px 40px white; */
-filter: drop-shadow(0.3rem 0.7rem 0.4rem rgba(0, 0, 0, 0.7));
+filter: drop-shadow(0.2rem 0.3rem 5px  var(--white));
 
 animation: move 2.5s ease infinite;
 @keyframes move {
@@ -170,6 +184,11 @@ position: relative;
 
 width: 50%;
 position: relative;
+font-family: usual, sans-serif;
+
+font-weight: 700;
+
+font-style: normal;
 
 
 
@@ -183,10 +202,10 @@ position: relative;
 
 const Text = styled.p`
 font-size: calc(0.5rem + 1vw);
-line-height: 1.5;
+line-height: 1.7;
 margin-left: 1rem;
-color: var(--black);
-font-family: 'Poppins', sans-serif;
+color: var(--blue-blue);
+
 
 
 `
@@ -195,7 +214,7 @@ display: inline-block;
 width: 1rem;
 height: 1rem;
 border-radius: 50%;
-background: var(--black);
+background: var(--white);
 margin: 0.5rem;
 box-shadow: 3px 3px 3px black;
 
@@ -239,7 +258,7 @@ const About = () => {
         <Main>
             <div>
                 <Title>About Us</Title>
-                <CurvedLine />
+           
             </div>
             <Content>
  
@@ -249,11 +268,11 @@ const About = () => {
         <KayoLogo src={kayologo} height="400" width="400"/>
                <AboutText>
         
-                <Text >Here at Kayo Time Details we're committed to protecting and mantaining your vehicals, proudly detailing vehicals of Annapolis and the surrounding areas. We offer a full service indoor detailing, either drop your car off or let us pick it up for you(limited to agreement). Sceduale an appoitment today and let us remind you what you car looks like new.</Text>
+                <Text> Here at Kayo Time Details we're committed to protecting and mantaining your vehicals, proudly detailing vehicals of Annapolis and the surrounding areas. We offer a full service indoor detailing, either drop your car off or let us pick it up for you(limited to agreement). Sceduale an appoitment today and let us remind you what you car looks like new.</Text>
                 <div style={{marginLeft: "0.5rem"}}>
-                    <Circle style={{ backgroundColor: "var(--bmwblue)"}}/>
-                    <Circle style={{ backgroundColor: "var(--bmwred)"}}/>
-                    <Circle style={{ backgroundColor: "var(--bmwlightblue)"}}/>
+                    <Circle style={{ backgroundColor: "#898c91"}}/>
+                    <Circle style={{ backgroundColor: "#898c91"}}/>
+                    <Circle style={{ backgroundColor: "#898c91"}}/>
                 </div>
                </AboutText>
             </Content>

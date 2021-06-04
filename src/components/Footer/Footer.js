@@ -10,6 +10,7 @@ font-size: 1rem;
 display: flex;
 align-items: center;
 justify-content: space-between;
+background: var(--white);
 @media only Screen and (max-width: 48em) {
     flex-direction: column;
     align-items: center;

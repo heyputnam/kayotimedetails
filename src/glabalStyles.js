@@ -19,7 +19,23 @@ export const GlobalStyle = createGlobalStyle`
     --bmwlightblue: #81C4FF;
     --tranblack: rgba(0, 0, 0, 0.9) ;
     --shadred: #EA3E48;
- 
+
+    /* 2nd color pallette */
+ --raisin-black: #292d3cff;
+--blue-black: #2d3142ff;
+--mandarin: #ef8354ff;
+--grey-blue: #4a576dff;
+--flat-blue: #2c4163ff;
+--blue-blue: #1f447eff;
+
+
+--straight-header: {
+font-family: usual, sans-serif;
+
+font-weight: 400;
+
+font-style: italic;
+}
 
 
 }
@@ -45,7 +61,7 @@ body{
     padding: 0;
     border: 0;
     outline: 0;
-    background: var(--white);
+    background: var(--black);
     overflow-x: hidden;
 
 }

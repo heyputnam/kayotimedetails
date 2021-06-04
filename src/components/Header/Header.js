@@ -1,5 +1,6 @@
-import logo from '../../assets/caricon.png'
+import logo from '../../assets/realcar.png'
 import styled from 'styled-components'
+import kayologo from '../../assets/bg.jpg'
 import { gsap } from 'gsap'
 import { useState, setState, useRef, useEffect } from 'react'
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
@@ -10,15 +11,50 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 1rem 1rem;
-background: var(--white);
-color: var(--black);
+/* background-image: radial-gradient(farthest-corner at 40px 40px,
+      #111 20%, #333 100%,#ddd 100%);
+
+
+color: var(--black); */
+
+color: #FFF;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+  background: #434343 none repeat scroll 0% 0%;
+  border: 1px solid #242424;
+  border-radius: 4px;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.25),
+    0 1px 0 rgba(255, 255, 255, 0.25) inset,
+    0 0 0 rgba(0, 0, 0, 0.5) inset,
+    0 1.25rem 0 rgba(255, 255, 255, 0.08) inset,
+    0 -1.25rem 1.25rem rgba(0, 0, 0, 0.3) inset,
+    0 1.25rem 1.25rem rgba(255, 255, 255, 0.1) inset;
+
+transition: all 0.2s linear 0s;
 position: relative;
 z-index: 500;
+font-family: primot, sans-serif;
+
+font-weight: 400;
+
+font-style: normal;
+
+
+
 @media only Screen and (max-width: 64em) {
     padding: 0.5rem 3rem;
+    &:before {
+    border-radius: 40px;
+    }
   }
   @media only Screen and (max-width: 40em) {
     padding: 0.5rem 1.5rem;
+    width: 100%;
+    &:before {
+    border-radius: 35px;
+  
+    }
   }
 
 
@@ -31,8 +67,10 @@ align-items: center;
 width: 3rem; 
 height: auto;
 cursor: pointer;
+
 img{
-    margin-right: 0.5rem;
+    margin-left: -1rem;
+    border-radius: 35px;
 }
 p{
     letter-spacing: 4px;
@@ -48,6 +86,8 @@ max-width: 40rem;
 display: flex;
 align-items: center;
 justify-content: space-between;
+font-size: 1.1rem;
+
 
 /* changes display for mobile screen */
 
@@ -60,8 +100,22 @@ justify-content: space-between;
 
     a{
     font-weight: 600;
-    color: var(--black);
-    line-height: 1.5;
+    color: var(--white);
+    line-height: 1.3;
+    margin-left: -3rem;
+    /* font-family: primot, sans-serif;
+
+font-weight: 400;
+
+font-style: normal; */
+font-family: usual, sans-serif;
+
+font-weight: 700;
+
+font-style: normal;
+
+
+
 
         &::after{
         content: '';
@@ -84,19 +138,28 @@ justify-content: space-between;
 `
 const Button = styled.button`
 background-color: var(--blue);
-padding: 0.5rem 1rem;
+padding: 0.4rem 1rem;
 border-radius: 25px;
-color: var(--white);
-font-weight:  600;
+color: var(---white);
+
+font-family: usual, sans-serif;
+
+font-weight: 700;
+
+font-style: normal;
+
+
+
+
 cursor: pointer;
 /* box-shadow:  0px 3px 16px -3px white; */
      &:hover{
          transform: scale(1.1);
-         box-shadow:  0px 3px 16px -3px #E7222E;
+         box-shadow:  0px 3px 16px -3px black;
      }
      &:focus{
          transform: scale(0.9);
-         box-shadow:  0px 4px 16px -3px #5e87ff;
+         box-shadow:  0px 4px 16px -3px black;
     }
 
 
@@ -117,7 +180,7 @@ display: none;
 
     &::before,&::after{
         content: '';
-        background: var(--black);
+        background: var(--white);
         width: 2rem;
         height: 2px;
         display: inline-block;
@@ -164,6 +227,7 @@ border-radius: 20px;
 margin: 0.5rem;
 overflow: hidden;
 
+
     a{
         color: var(--white);
         font-weight: 600;
@@ -196,10 +260,11 @@ const Header = () => {
               left: "0",
               right: "4.5rem",
               padding: "1rem 1rem",
-      
+              
               borderRadius: "0 0 50px 50px",
       
               border: "2px solid var(--white)",
+            
       
               duration: 1,
               ease: "power1.out",
@@ -210,6 +275,7 @@ const Header = () => {
                 end: "+=100",
                 scrub: true,
               },
+            
             });
           } else {
             //   regular webpage setup
@@ -221,8 +287,8 @@ const Header = () => {
               padding: "1.5rem 2rem",
       
               borderRadius: "50px",
-      
-              border: "4px solid var(--bmwred)",
+              border: "2px solid var(--white)",
+        
       
               duration: 1,
               ease: "power1.out",
@@ -233,14 +299,15 @@ const Header = () => {
                 end: "+=250",
                 scrub: true,
               },
+            
             });
           }
         }, []);
     return(
         <Headers ref={headerRef} >
             <Logo>
-            <img src={logo}  alt="logo"/>
-            <p>KayoTimeDetails</p>
+            <img src={kayologo}  alt="logo"/>
+            {/* <p>KayoTimeDetails</p> */}
           </Logo>
           <Nav>
               <a href="#home" >Home</a>
