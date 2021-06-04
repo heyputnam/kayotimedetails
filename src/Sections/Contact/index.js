@@ -223,13 +223,13 @@ const Contact = () => {
             </div>
         </Form>
         <Icons>
-             <a href="https//facebook.com/">
+             <a href="https://www.facebook.com/kayotimedetails">
                  <img src={facebook}></img>
              </a>
              <a href="https://www.instagram.com/kayotimedetails/?hl=en">
                  <img src={instagram}></img>
              </a>
-             <a href="https://www.instagram.com/kayotimedetails/?hl=en">
+             <a href="https://www.google.com/maps/place/Kayo+Time+Details/@38.9875421,-76.5283712,15z/data=!4m5!3m4!1s0x0:0x9063af6d112b428!8m2!3d38.9875421!4d-76.5283712">
                  <img src={google}></img>
              </a>
          </Icons>
